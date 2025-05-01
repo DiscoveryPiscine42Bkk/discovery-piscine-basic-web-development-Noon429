@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo</title>
+  <style>
+    .todo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: auto;
+      margin-top: 30px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #todoList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .todo-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 5px;
+    }
+  </style>
+
+  <!-- ✅ jQuery library CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Todo List</h1>
+
+  <div class="todo">
+    <input type="text" id="textfield" placeholder="Enter todo..." />
+    <button id="addbtn">Add to do</button>
+  </div>
+
+  <div id="todoList"></div>
+
+  <!-- Your script file (todo.js) -->
+  <script src="todo.js"></script>
+</body>
+</html>

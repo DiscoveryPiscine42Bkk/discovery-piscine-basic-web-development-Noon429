@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balloon</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 50px auto;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      let colors = ['red', 'green', 'blue'];
+      let colorIndex = 0;
+      let size = 200;
+
+      // Event handler for click
+      $('#balloon').click(function() {
+        size += 10;
+        colorIndex++;
+        if (size > 420) size = 200;
+        if (colorIndex > 2) colorIndex = 0;
+        updateBalloon();
+      });
+
+      // Event handler for mouseleave
+      $('#balloon').mouseleave(function() {
+        size -= 5;
+        colorIndex--;
+        if (size < 200) size = 200;
+        if (colorIndex < 0) colorIndex = 2;
+        updateBalloon();
+      });
+
+      // Function to update the balloon's style
+      function updateBalloon() {
+        $('#balloon').css({
+          'background-color': colors[colorIndex],
+          'width': size + 'px',
+          'height': size + 'px'
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="balloon"></div>
+</body>
+</html>

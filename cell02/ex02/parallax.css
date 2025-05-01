@@ -1,0 +1,43 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+#parallax {
+ 
+    background-image: url('bts.jpeg');
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 50vh;
+}
+h1{
+     color: white;
+}
+#second {
+    background-color: black;
+    min-height: 40vh;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 30vh;
+}
+
+#third {
+    background-image: url('MRT-BLUELINE.jpg');
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 50vh;
+}

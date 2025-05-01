@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Positive Thinking</title>
+  <style>
+    .cal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: auto;
+      margin-top: 120px;
+      height: 100px;
+      width: 480px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+    }
+  </style>
+  <script>
+    function calculate() {
+      const input_1 = parseFloat(document.getElementById('input_1').value);
+      const input_2 = parseFloat(document.getElementById('input_2').value);
+      const operator = document.getElementById('operator').value;
+      let result;
+
+      if (isNaN(input_1) || input_1 < 0 || isNaN(input_2) || input_2 < 0) {
+        result = "Error :(";
+      } else if (operator === '+') {
+        result = input_1 + input_2;
+      } else if (operator === '-') {
+        result = input_1 - input_2;
+      } else if (operator === '*') {
+        result = input_1 * input_2;
+      } else if (operator === '/' && input_2 !== 0) {
+        result = input_1 / input_2;
+      } else if (operator === '%' && input_2 !== 0) {
+        result = input_1 % input_2;
+      } else {
+        result = "It's over 9000!";
+      }
+
+      console.log(result);
+      alert(result);
+    }
+
+    function showalert() {
+      alert("Please, use me...");
+    }
+
+    setInterval(showalert, 30000);
+  </script>
+</head>
+<body>
+  <h1>Calculator Positive Thinking</h1>
+  <div class="cal">
+    <input type="text" id="input_1" placeholder="Enter number 1">
+    <select name="operator" id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="input_2" placeholder="Enter number 2">
+    <button onclick="calculate()">Try me!</button>
+  </div>
+</body>
+</html>

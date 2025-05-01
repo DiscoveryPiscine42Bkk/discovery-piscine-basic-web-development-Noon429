@@ -1,0 +1,58 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    padding: 40px
+}
+
+h2 {
+    text-align: center;
+}
+
+.card {
+    width: 375px;
+    height: 870px;
+    box-shadow: 0 0 10px 10px rgb(214, 214, 214);
+    align-items: top;
+    display:flex;
+    margin: auto;
+}
+
+img {
+    height: 500px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
+.fa {
+    padding: 15px;
+    font-size: 24px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.black {
+    background-color: black;
+    height: 50px;
+    display: block;
+}
+  
+.contact {
+    color: white;
+    padding-top: 12px;
+}

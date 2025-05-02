@@ -162,42 +162,57 @@ h1{
     text-align: center;
 }
 
+/* Container to center .homebox */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive homebox */
 .homebox {
-    width: 20vw;
-    height: 20vh;
-    background-color: rgba(0, 0, 0, 0.7); /* Black with 30% opacity */
-    border-radius: 30px;
-
-    
+  width: 90%;
+  max-width: 50vw;
+  padding: clamp(1rem, 5vw, 2rem);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+/* Header text */
 #welcome {
-    margin: 30px;
-    font: bolder;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 
+/* Responsive buttons */
 .cvbtn {
-    height: 80px;
-    width: 160px;
-    color: orange;
-    background-color: transparent;
-    border: 3px solid orange;
-    font-size: 22px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-    border-radius: 10px;
-    text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 1rem 2rem;
+  color: orange;
+  background-color: transparent;
+  border: 3px solid orange;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-  }
-  
-  .cvbtn:hover {
-    width: 180px;
-    height: 100px;
-    background-color: orange;
-    color: black;
-  }
-  
+.cvbtn:hover {
+  background-color: orange;
+  color: black;
+  transform: scale(1.1);
+}
+
 
 /*
 nav-bar style
@@ -651,4 +666,3 @@ nav-bar style
     line-height: 1.5;
     color: #333;
   }
-  
